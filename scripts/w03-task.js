@@ -7,11 +7,11 @@ function add (number1, number2) {
     return number1 + number2; // return the sum of the two given numbers.
 }
 
-function addNumbers (add1, add2) {
+function addNumbers () {
     let addNumber1 = Number(document.querySelector("#add1").value);
     let addNumber2 = Number(document.querySelector("#add2").value); 
-
-    document.querySelector("#sum").value = add(addNumber1, addNumber2);
+    
+    document.querySelector("sum").value = add(addNumber1, addNumber2);
 }
 
 document.querySelector("#addNumbers").addEventListener("click", addNumbers);
@@ -21,7 +21,7 @@ function subtract (number1, number2) {
     return number1 - number2; //return the difference between the two given numbers
 }
 
-function subtractNumbers (subtract1, subtract2) {
+function subtractNumbers () {
     let subtractNumber1 = Number(document.querySelector("#subtract1").value);
     let subtractNumber2 = Number(document.querySelector("#subtract2").value);
 
@@ -33,7 +33,7 @@ document.querySelector("#subtractNumbers").addEventListener("click", subtractNum
 /* Arrow Function - Multiply Numbers */
 let multiply = (number1, number2) => number1 * number2
 
-function multiplyNumbers (factor1, factor2) {
+function multiplyNumbers () {
     let multiplyNumber1 = Number(document.querySelector("#factor1").value);
     let multiplyNumber2 = Number(document.querySelector("#factor2").value);
 
@@ -47,7 +47,7 @@ function divide (number1, number2) {
     return number1 / number2;
 }
 
-function divideNumbers (dividend, divisor) {
+function divideNumbers () {
     let divideNumber1 = Number(document.querySelector("#dividend").value);
     let divideNumber2 = Number(document.querySelector("#divisor").value);
 
