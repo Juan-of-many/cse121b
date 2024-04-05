@@ -36,9 +36,11 @@ function reset() {
 }
 
 /* filterTemples Function */
-let filterTemples = function (temples) {
+// let filterTemples = function (temples) {
+function filterTemples(temples) {
     reset();
-    let filter = document.getElementById("filterTemples").value;
+    let filter = document.querySelector("#filtered").value;
+    console.log(array);
     switch (filter) {
         case "utah":
             displayTemples(temples.filter(temple => temple["location"].includes("Utah")));
@@ -58,8 +60,7 @@ let filterTemples = function (temples) {
     }
 }
 
-
+getTemples();
 /* Event Listener */
 document.querySelector("#filtered").addEventListener("change", () => { filterTemples(templeList) });
 
-getTemples();
