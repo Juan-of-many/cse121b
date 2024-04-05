@@ -40,7 +40,6 @@ function reset() {
 function filterTemples(temples) {
     reset();
     let filter = document.querySelector("#filtered").value;
-    console.log(array);
     switch (filter) {
         case "utah":
             displayTemples(temples.filter(temple => temple["location"].includes("Utah")));
