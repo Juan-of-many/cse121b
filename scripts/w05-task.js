@@ -25,7 +25,7 @@ const displayTemples = (temples) => {
 /* async getTemples Function using fetch()*/
 const getTemples = async () => {
     const response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
-    const templeList = await response.json();
+    templeList = await response.json(); /* Having const here declares a new variable. I should have instead let it act as setting the value of the existing global variable. Changing from const templeList to just templeList here fixes the entire problem. Thanks to my teacher for pointing that out. It is a wee bit painful the hours wasted. I appreciate your help very much. */
 
     displayTemples(templeList);
 }
