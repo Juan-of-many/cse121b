@@ -101,7 +101,6 @@ const getThesaurus = async () => {
     // console.log(alt_words);
 };
 
-getThesaurus();
 console.log(synonym_array.value);
 
 let alt_word = synonym_array.at(0); // <------ at is my array method
@@ -130,4 +129,5 @@ getDictionary(word_definition.value, alt_word.value);
 }
 }
 
+getThesaurus()
 div.addEventListener('click', censor_check);
