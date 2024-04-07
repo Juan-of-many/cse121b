@@ -18,9 +18,23 @@
  event.preventDefault();
  var commentContent = document.getElementById('pesho');
  var badWords = ["crap", "fuck", "cunt"];
-
+   console.log(commentContent.value)
+   commentContent.value =censore(commentContent.value, badWords); 
 }   
 
+function censore(string, filters) {
+    console.log('in')
+// "i" is to ignore case and "g" for global "|" for OR match
+var regex = new RegExp(filters.join("|"), "gi");
+return string.replace(regex, function (match) {
+    //replace each letter with a star
+    var stars = '';
+    for (var i = 0; i < match.length; i++) {
+        stars += '*';
+    }
+    return stars;
+});
+}
 
 div.addEventListener('click',replaceWords); 
 </script>
