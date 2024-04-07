@@ -76,7 +76,8 @@ function censor_check(event) {
 event.preventDefault();
 
 if (user_word in bad_words) {
-
+    console.log(user_word)
+    
 const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`
 //user word here
 const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`
@@ -87,7 +88,6 @@ let alt_words = []
 const getThesaurus = async () => {
     const response = await fetch(ThesAurus)
     alt_words = await response.json();
-    console.log(alt_words)
 } 
 
 getThesaurus()
