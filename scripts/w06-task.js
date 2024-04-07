@@ -93,9 +93,10 @@ const getThesaurus = async () => {
     alt_words = await response.json();
 } 
 
+
 getThesaurus()
 let alt_word = alt_words.at(0); // <------ at is my array method
-console.log(alt_word.value)
+console.log(alt_word)
 
 const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`
 //alt word here
