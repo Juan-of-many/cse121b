@@ -100,7 +100,7 @@ console.log(alt_word.value)
 const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`
 //alt word here
 const Ionary = `?key=45061386-1028-4cea-95fa-b7393a2cc18b`
-const DictIonary = `${Dict}${alt_word.value}${Ionary}`
+const DictIonary = `${Dict}${alt_word}${Ionary}`
 
 const getDictionary = async () => {
     const Response = await fetch(DictIonary)
