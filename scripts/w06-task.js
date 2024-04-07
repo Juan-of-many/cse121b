@@ -75,9 +75,10 @@ let user_word = document.getElementById(`cone_of_silence`)
 function censor_check(event) {
 event.preventDefault();
 
-if (user_word in bad_words) {
+
+if (bad_words.includes(user_word)) {
     console.log(user_word)
-    
+
 const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`
 //user word here
 const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`
