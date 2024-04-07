@@ -1,7 +1,7 @@
 
 /* Warning, what follows is a list from wikipedia of english swear words.
 Scroll past to the rest of the code if you so desire. */
-var bad_words = [
+var bad_words = (
     `arse`,
     `arsehead`,
     `arsehole`,
@@ -63,7 +63,7 @@ var bad_words = [
     `twat`,
     `wanker`,
     `poop`
-]
+)
 
 
 
