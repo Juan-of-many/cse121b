@@ -95,6 +95,7 @@ const getThesaurus = async () => {
 
 getThesaurus()
 let alt_word = alt_words.at(0); // <------ at is my array method
+console.log(alt_word.value)
 
 const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`
 //alt word here
@@ -105,11 +106,12 @@ const getDictionary = async () => {
     const Response = await fetch(DictIonary)
     word_definition = await Response.json();
 }
+console.log(word_definition.value)
 
-getDictionary()
+getDictionary(word_definition.value, alt_word.value)
 
     document.querySelector(`#cone_of_silence`).innerHTML = `What you entered registers as a bad word. Before you get your mouth washed out with soap, here is an alternative.`
-    document.querySelector(`#response_to_user`).innerHTML = alt_word
+    document.querySelector(`#response_to_user`).innerHTML = alt_word.value
     document.querySelector(`#definition`).innerHTML = word_definition.value
 
 } else {
