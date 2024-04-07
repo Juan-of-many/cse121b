@@ -84,7 +84,7 @@ if (bad_words.includes(user_word.value)) {
 const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`
 //user word here
 const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`
-const ThesAurus = `${Thes}${user_word.value}${Aurus}`
+const ThesAurus = `${Thes}${user_word}${Aurus}`
 
 let alt_words = []
 
