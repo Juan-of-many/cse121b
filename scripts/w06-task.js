@@ -72,9 +72,9 @@ var div = document.getElementById('button');
 
 function censor_check(event) {
 
-var user_word = document.getElementById(`cone_of_silence`).value;
+var user_word = document.getElementById(`cone_of_silence`).innerHTML;
 event.preventDefault();
-console.log(user_word.value);
+console.log(user_word);
 console.log("hi");
 
 if (bad_words.includes(user_word)) {
