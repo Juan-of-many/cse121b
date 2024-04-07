@@ -87,7 +87,7 @@ const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`
 const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`
 const ThesAurus = `${Thes}${user_word.value}${Aurus}`
 
-const full_response = []
+let full_response = []
 let synonym_array = []
 
 const getThesaurus = async () => {
@@ -95,7 +95,7 @@ const getThesaurus = async () => {
     full_response = await response.json();
     console.log(full_response.value)
 
-    synonym_array = full_response[0[meta[syns[0]]]];
+    synonym_array = full_response[0][meta][syns][0];
     console.log(synonym_array.value)
     // alt_words.push(synonym_array.value);
     // console.log(alt_words);
