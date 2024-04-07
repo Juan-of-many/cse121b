@@ -94,18 +94,18 @@ const getThesaurus = async () => {
     const response = await fetch(ThesAurus);
     full_response = await response.json();
     console.log(full_response)
-    let synonym_array = full_response[syns[0].value]
 
+    let synonym_array = full_response[0[meta[syns[0]]]];
     console.log(synonym_array)
     // alt_words.push(synonym_array.value);
     // console.log(alt_words);
 };
 
-console.log(alt_words);
+console.log(synonym_array);
 getThesaurus();
-console.log(alt_words);
+console.log(synonym_array);
 
-let alt_word = alt_words.at(0); // <------ at is my array method
+let alt_word = synonym_array.at(0); // <------ at is my array method
 console.log(alt_word);
 
 const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`;
