@@ -73,7 +73,7 @@ var div = document.getElementById('button');
 function censor_check(event) {
 event.preventDefault();
 
-var user_word = document.getElementById(`poo`).innerHTML;
+var user_word = document.querySelector(`#cone_of_silence`).value;
 
 console.log(user_word);
 console.log("hi");
