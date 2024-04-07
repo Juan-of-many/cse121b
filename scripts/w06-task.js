@@ -81,9 +81,9 @@ console.log("hi");
 if (bad_words.includes(user_word.value)) {
     console.log(user_word.value)
 
-const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`.value
+const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`
 //user word here
-const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`.value
+const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`
 const ThesAurus = `${Thes}${user_word.value}${Aurus}`
 
 const alt_words = []
@@ -94,9 +94,9 @@ const getThesaurus = async () => {
     alt_words.push(synonym_array);
 };
 
+getThesaurus();
 console.log(alt_words);
 
-getThesaurus();
 let alt_word = alt_words.at(0); // <------ at is my array method
 console.log(alt_word);
 
