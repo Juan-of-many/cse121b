@@ -96,7 +96,7 @@ const getThesaurus = async () => {
 };
 
 getThesaurus();
-console.log(alt_words);
+console.log(alt_words.value);
 
 let alt_word = alt_words.at(0); // <------ at is my array method
 console.log(alt_word);
