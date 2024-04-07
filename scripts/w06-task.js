@@ -99,7 +99,7 @@ let alt_word = alt_words.at(0); // <------ at is my array method
 const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`
 //alt word here
 const Ionary = `?key=45061386-1028-4cea-95fa-b7393a2cc18b`
-const DictIonary = `${Dict}${alt_word}${Ionary}`
+const DictIonary = `${Dict}${alt_word.value}${Ionary}`
 
 const getDictionary = async () => {
     const Response = await fetch(DictIonary)
@@ -110,7 +110,7 @@ getDictionary()
 
     document.querySelector(`#cone_of_silence`).innerHTML = `What you entered registers as a bad word. Before you get your mouth washed out with soap, here is an alternative.`
     document.querySelector(`#response_to_user`).innerHTML = alt_word
-    document.querySelector(`#definition`).innerHTML = word_definition
+    document.querySelector(`#definition`).innerHTML = word_definition.value
 
 } else {
     document.querySelector(`#response_to_user`).innerHTML = `The word you entered is not found in our list of bad words. Try another word!`
