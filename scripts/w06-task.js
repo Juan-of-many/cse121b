@@ -92,7 +92,7 @@ const alt_words = []
 const getThesaurus = async () => {
     const response = await fetch(ThesAurus);
     let full_response = await response.json();
-    let synonym_array = full_response[syns]
+    let synonym_array = full_response[syns].value
 
     console.log(synonym_array)
     alt_words.push(synonym_array.value);
