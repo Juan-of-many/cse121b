@@ -90,6 +90,7 @@ let alt_words = []
 const getThesaurus = async () => {
     const response = await fetch(ThesAurus)
     alt_words = await response.json();
+    console.log(alt_words)
 } 
 
 getThesaurus()
