@@ -71,9 +71,10 @@ const bad_words = [
 var div = document.getElementById('button'); 
 
 function censor_check(event) {
-
-var user_word = document.getElementById(`cone_of_silence`).innerHTML;
 event.preventDefault();
+
+var user_word = document.getElementById(`poo`).innerHTML;
+
 console.log(user_word);
 console.log("hi");
 
