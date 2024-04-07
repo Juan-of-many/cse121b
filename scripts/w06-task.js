@@ -72,7 +72,7 @@ var div = document.getElementById('button');
 
 function censor_check(event) {
 
-let user_word = document.getElementById(`cone_of_silence`);
+var user_word = document.getElementById(`cone_of_silence`);
 event.preventDefault();
 console.log(user_word);
 console.log("hi");
