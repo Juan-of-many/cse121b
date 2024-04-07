@@ -70,13 +70,11 @@ const bad_words = [
 
 var div = document.getElementById('button'); 
 
-
-
 function censor_check(event) {
 
 let user_word = document.getElementById(`cone_of_silence`)
 event.preventDefault();
-
+console.log(user_word)
 
 if (bad_words.includes(user_word)) {
     console.log(user_word)
