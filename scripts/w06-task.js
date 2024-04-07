@@ -93,6 +93,7 @@ const getThesaurus = async () => {
     alt_words = await response.json();
 } 
 
+console.log(alt_words)
 
 getThesaurus()
 let alt_word = alt_words.at(0); // <------ at is my array method
