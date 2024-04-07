@@ -86,37 +86,39 @@ const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`.value
 const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`.value
 const ThesAurus = `${Thes}${user_word.value}${Aurus}`
 
+const alt_words = []
 
 const getThesaurus = async () => {
-    const response = await fetch(ThesAurus)
-    alt_words = await response.json();
-} 
+    const response = await fetch(ThesAurus);
+    synonym_array = await response.json();
+    alt_words.push(synonym_array);
+};
 
-console.log(alt_words)
+console.log(alt_words);
 
-getThesaurus()
+getThesaurus();
 let alt_word = alt_words.at(0); // <------ at is my array method
-console.log(alt_word)
+console.log(alt_word);
 
-const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`
+const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`;
 //alt word here
-const Ionary = `?key=45061386-1028-4cea-95fa-b7393a2cc18b`
-const DictIonary = `${Dict}${alt_word}${Ionary}`
+const Ionary = `?key=45061386-1028-4cea-95fa-b7393a2cc18b`;
+const DictIonary = `${Dict}${alt_word}${Ionary}`;
 
 const getDictionary = async () => {
-    const Response = await fetch(DictIonary)
+    const Response = await fetch(DictIonary);
     word_definition = await Response.json();
 }
-console.log(word_definition.value)
+console.log(word_definition.value);
 
-getDictionary(word_definition.value, alt_word.value)
+getDictionary(word_definition.value, alt_word.value);
 
-    //document.querySelector(`#cone_of_silence`).innerHTML = `What you entered registers as a bad word. Before you get your mouth washed out with soap, here is an alternative.`
-    document.querySelector(`#response_to_user`).innerHTML = alt_word.value
-    document.querySelector(`#definition`).innerHTML = word_definition.value
+    document.querySelector(`#cone_of_silence`).innerHTML = `What you entered registers as a bad word. Before you get your mouth washed out with soap, here is an alternative.`;
+    document.querySelector(`#response_to_user`).innerHTML = alt_word.value;
+    document.querySelector(`#definition`).innerHTML = word_definition.value;
 
 } else {
-    document.querySelector(`#response_to_user`).innerHTML = `The word you entered is not found in our list of bad words. Try another word!`
+    document.querySelector(`#response_to_user`).innerHTML = `The word you entered is not found in our list of bad words. Try another word!`;
     /* If the word is not in the dictionary of bad words, inform user their word is not found in this list of bad words and invite user to check other words. */
 }
 }
