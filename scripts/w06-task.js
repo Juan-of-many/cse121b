@@ -118,4 +118,4 @@ getDictionary()
 }
 }
 
-div.addEventListener('click',censor_check);
+div.addEventListener('click', censor_check);
