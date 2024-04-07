@@ -1,4 +1,3 @@
-/* splitting the files from one and another. I tried for hours to get the merriam webster dictionary to allow me to properly access their api data for what I hoped would have been a cool synonym and dictionary entry service to exchange swear words with more unique vocabulary, but after trying to make changes for 6 hours, it didn't work out. */
 
 /* Warning, what follows is a list from wikipedia of english swear words.
 Scroll past to the rest of the code if you so desire. */
@@ -63,7 +62,9 @@ const bad_words = [
     `sweet Jesus`,
     `twat`,
     `wanker`,
-    `poop`
+    `poop`,
+    `run`,
+    `car`
 ]
 
 
@@ -77,7 +78,6 @@ event.preventDefault();
 var user_word = document.querySelector(`#cone_of_silence`);
 
 console.log(user_word.value);
-console.log("hi");
 
 if (bad_words.includes(user_word.value)) {
     console.log(user_word.value)
@@ -87,19 +87,25 @@ const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`
 const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`
 const ThesAurus = `${Thes}${user_word.value}${Aurus}`
 
-const alt_words = []
+let full_response = []
+let synonym_array = []
 
 const getThesaurus = async () => {
     const response = await fetch(ThesAurus);
-    synonym_array = await response.json();
-    alt_words.push(synonym_array);
+    full_response = await response.json();
+    console.log(full_response.value)
+
+    synonym_array = full_response[0][0][7][0];
+    console.log(synonym_array.value)
+    // alt_words.push(synonym_array.value);
+    // console.log(alt_words);
 };
 
-console.log(alt_words);
-
 getThesaurus();
-let alt_word = alt_words.at(0); // <------ at is my array method
-console.log(alt_word);
+console.log(synonym_array.value);
+
+let alt_word = synonym_array.at(0); // <------ at is my array method
+    console.log(alt_word.value);
 
 const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`;
 //alt word here
