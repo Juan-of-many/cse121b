@@ -101,7 +101,6 @@ const getThesaurus = async () => {
     // console.log(alt_words);
 };
 
-console.log(synonym_array);
 getThesaurus();
 console.log(synonym_array);
 
