@@ -78,7 +78,6 @@ event.preventDefault();
 var user_word = document.querySelector(`#cone_of_silence`);
 
 console.log(user_word.value);
-console.log("hi");
 
 if (bad_words.includes(user_word.value)) {
     console.log(user_word.value)
@@ -93,19 +92,19 @@ const full_response = []
 const getThesaurus = async () => {
     const response = await fetch(ThesAurus);
     full_response = await response.json();
-    console.log(full_response)
+    console.log(full_response.value)
 
     let synonym_array = full_response[0[meta[syns[0]]]];
-    console.log(synonym_array)
+    console.log(synonym_array.value)
     // alt_words.push(synonym_array.value);
     // console.log(alt_words);
 };
 
 getThesaurus();
-console.log(synonym_array);
+console.log(synonym_array.value);
 
 let alt_word = synonym_array.at(0); // <------ at is my array method
-console.log(alt_word);
+console.log(alt_word.value);
 
 const Dict = `https://dictionaryapi.com/api/v3/references/collegiate/json/`;
 //alt word here
