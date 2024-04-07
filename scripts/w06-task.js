@@ -1,7 +1,7 @@
 
 /* Warning, what follows is a list from wikipedia of english swear words.
 Scroll past to the rest of the code if you so desire. */
-const bad_words = [
+const bad_words = (
     `arse`,
     `arsehead`,
     `arsehole`,
@@ -63,7 +63,7 @@ const bad_words = [
     `twat`,
     `wanker`,
     `poop`
-]
+)
 
 
 
