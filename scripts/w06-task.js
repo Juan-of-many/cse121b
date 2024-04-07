@@ -110,7 +110,7 @@ console.log(word_definition.value)
 
 getDictionary(word_definition.value, alt_word.value)
 
-    document.querySelector(`#cone_of_silence`).innerHTML = `What you entered registers as a bad word. Before you get your mouth washed out with soap, here is an alternative.`
+    //document.querySelector(`#cone_of_silence`).innerHTML = `What you entered registers as a bad word. Before you get your mouth washed out with soap, here is an alternative.`
     document.querySelector(`#response_to_user`).innerHTML = alt_word.value
     document.querySelector(`#definition`).innerHTML = word_definition.value
 
