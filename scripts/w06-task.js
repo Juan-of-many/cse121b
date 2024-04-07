@@ -86,7 +86,7 @@ const Thes = `https://dictionaryapi.com/api/v3/references/thesaurus/json/`
 const Aurus =  `?key=4374a1f1-034f-4ce7-8fa5-341e429800ad`
 const ThesAurus = `${Thes}${user_word.value}${Aurus}`
 
-let alt_words = []
+
 
 const getThesaurus = async () => {
     const response = await fetch(ThesAurus)
