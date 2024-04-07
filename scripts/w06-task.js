@@ -70,7 +70,7 @@ var bad_words = [
 
 
 
-
+var div = document.getElementById('button'); 
 
 function censor_check(event) {
 
