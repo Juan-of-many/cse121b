@@ -62,7 +62,8 @@ const bad_words = [
     `sweet Jesus`,
     `twat`,
     `wanker`,
-    `poop`
+    `poop`,
+    `run`
 ]
 
 
